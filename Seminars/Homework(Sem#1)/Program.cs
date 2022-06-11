@@ -62,14 +62,11 @@ else
 принимает число (N), а на выходе показывает все чётные
 числа от 1 до N. */
 
-/* Console.Write("Введите число: ");
+Console.Write("Введите число: ");
 int a = int.Parse(Console.ReadLine());
 int b = 0;
-while (b < a)
+while (b < a - 1)
 {
-    if (a % 2 == 0)
-    {
-        b += 2;
-        Console.WriteLine(b);
-    }
-}  */
+    b += 2;
+    Console.Write(b + " ");
+}
