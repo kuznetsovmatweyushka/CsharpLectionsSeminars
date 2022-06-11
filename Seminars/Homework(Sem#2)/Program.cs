@@ -43,14 +43,11 @@ else if (number < 6)
 {
     Console.WriteLine("Будни =(");
 }
-else if (number == 6)
-{
-    Console.WriteLine("Выходной!!!");
-}
-else if (number == 7)
+else if (number == 6 || number == 7)
 {
     Console.WriteLine("Выходной!!!");
 } */
+
 
 /* 13. Напишите программу, которая выводит
 третью цифру заданного числа или сообщает, что
