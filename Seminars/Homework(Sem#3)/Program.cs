@@ -35,11 +35,10 @@ Console.WriteLine("Введите Yb: ");
 double Yb = double.Parse(Console.ReadLine());
 Console.WriteLine("Введите Zb: ");
 double Zb = double.Parse(Console.ReadLine());
-double X = (Xb - Xa) * (Xb - Xa);
-double Y = (Yb - Ya) * (Yb - Ya);
-double Z = (Zb - Za) * (Zb - Za);
-double distanse = Math.Sqrt(X + Y + Z);
-Console.WriteLine("Расстояние :" + distanse); */
+double distanse = Math.Sqrt(Math.Pow(Xb - Xa, 2)
+                            + Math.Pow(Yb - Ya, 2)
+                            + Math.Pow(Zb - Za, 2));
+Console.WriteLine("Расстояние :" + Math.Round(distanse,2)); */
 
 /* Задача 23: Напишите программу, которая принимает на 
 вход число (N) и выдаёт таблицу кубов чисел от 1 до N. */
@@ -47,10 +46,8 @@ Console.WriteLine("Расстояние :" + distanse); */
 /* Console.WriteLine("Введите N:");
 int N = int.Parse(Console.ReadLine());
 int count = 1;
-double a = 1;
 while (count <= N)
 {
-    a = Math.Pow(count,3);
-    Console.WriteLine(a);
+    Console.Write(Math.Pow(count, 3) + " ");
     count++;
 } */

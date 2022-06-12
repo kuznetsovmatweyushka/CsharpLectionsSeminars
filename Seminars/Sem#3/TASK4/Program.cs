@@ -4,10 +4,8 @@
 Console.WriteLine("Введите N:");
 int N = int.Parse(Console.ReadLine());
 int count = 1;
-double a = 1;
 while (count <= N)
 {
-    a = Math.Pow(count,2);
-    Console.WriteLine(a);
+    Console.Write(Math.Pow(count, 2) + " ");
     count++;
 }
