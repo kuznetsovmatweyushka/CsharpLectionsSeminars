@@ -10,7 +10,5 @@ Console.WriteLine("Введите Xb: ");
 double Xb = double.Parse(Console.ReadLine());
 Console.WriteLine("Введите Yb: ");
 double Yb = double.Parse(Console.ReadLine());
-double X = (Xb - Xa) * (Xb - Xa);
-double Y = (Yb - Ya) * (Yb - Ya);
-double distanse = Math.Sqrt(X + Y);
+double distanse = Math.Sqrt(Math.Pow(Xb - Xa,2) + Math.Pow(Yb - Ya,2));
 Console.WriteLine("Расстояние :" + distanse);
