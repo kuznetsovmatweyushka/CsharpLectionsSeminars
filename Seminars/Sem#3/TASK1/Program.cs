@@ -22,3 +22,4 @@ else if (X < 0 & Y < 0)
 {
     Console.WriteLine("Вы находитесь в четврети №3.");
 }
+else Console.WriteLine("Координаты не принадлежат плоскости!");
