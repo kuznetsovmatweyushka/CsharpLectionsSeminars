@@ -28,9 +28,15 @@ Console.WriteLine(sum); */
 
 /* Задача 29: Напишите программу, которая задаёт массив
 из 8 элементов и выводит их на экран. */
-/* int[] array = new int[8] { 1, 3, 55, 4, 8, 9, 7, 8 };
+/* Console.Write("Введите количество эл-в в массиве: ");
+int N = int.Parse(Console.ReadLine());
+Console.WriteLine("Введите диапазон цифр от: ");
+int a = int.Parse(Console.ReadLine());
+Console.Write("до ");
+int b = int.Parse(Console.ReadLine());
+int[] array = new int[N];
 for (int i = 0; i < array.Length; i++)
 {
-    //array[i] = new Random().Next(0, 10);
+    array[i] = new Random().Next(a, b);
     Console.Write($"{array[i]}" + " ");
 } */
