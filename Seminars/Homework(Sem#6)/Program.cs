@@ -45,6 +45,7 @@ else
     {
 
         double x = (b2 - b1) / (k1 - k2);
+        double y = k2 * x + b2;
         return x;
     }
     double x = Math.Round(Point(b1, k1, b2, k2), 2);
