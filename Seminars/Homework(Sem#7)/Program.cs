@@ -72,23 +72,25 @@ void FillArray(int[,] array, int a, int b)
 FillArray(array, a, b);
 Console.WriteLine("Ваш массив выглядит вот так: ");
 PrintArray(array);
-Console.WriteLine("Введите число:");
-int numb = int.Parse(Console.ReadLine());
-void FindElement(int[,] array, int numb)
+Console.WriteLine("Введите номер строки: ");
+int m1 = int.Parse(Console.ReadLine());
+Console.WriteLine("Введите номер столбца: ");
+int n1 = int.Parse(Console.ReadLine());
+void FindElement(int[,] array, int m1, int n1)
 {
-    bool search = false;
+    bool search = true;
     for (int i = 0; i < array.GetLength(0); i++)
     {
         for (int j = 0; j < array.GetLength(1); j++)
         {
-            if (array[i, j] == numb)
-                search = true;
+            if (m1 >= array.GetLength(0) || n1 >= array.GetLength(1))
+                search = false;
         }
     }
-    if (search == true) Console.WriteLine("Элемент существует!");
+    if (search == true) Console.WriteLine($"Элемент существует и равен {array[m1, n1]}!");
     else Console.WriteLine("Элемента не существует!");
 }
-FindElement(array, numb); */
+FindElement(array, m1, n1); */
 
 /* Задача 52: Задайте двумерный массив из целых чисел.
 Найдите среднее арифметическое элементов в каждом
@@ -128,14 +130,14 @@ Console.WriteLine("Ваш массив выглядит вот так: ");
 PrintArray(array);
 void Average(int[,] array)
 {
-    for (int i = 0; i < array.GetLength(0); i++)
+    for (int j = 0; j < array.GetLength(1); j++)
     {
         double sum = 0;
-        for (int j = 0; j < array.GetLength(1); j++)
+        for (int i = 0; i< array.GetLength(0); i++)
         {
             sum += array[i, j];
         }
-        Console.WriteLine($"Среднее арифметическое {i} строки: {sum / array.GetLength(0)} ");
+        Console.WriteLine($"Среднее арифметическое {j} столбца: {sum / array.GetLength(0)} ");
     }
 }
 Average(array); */
