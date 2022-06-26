@@ -23,7 +23,7 @@ Console.WriteLine($"Количество чисел больше 0: " + more0); 
 пересечения двух прямых, заданных уравнениями y = k1 *
 x + b1, y = k2 * x + b2; значения b1, k1, b2 и k2 задаются
 пользователем. */
-Console.WriteLine("Введите b1: ");
+/* Console.WriteLine("Введите b1: ");
 double b1 = double.Parse(Console.ReadLine());
 Console.WriteLine("Введите k1: ");
 double k1 = double.Parse(Console.ReadLine());
@@ -41,14 +41,14 @@ else if (b1 == b2)
 }
 else
 {
-    double Point(double b1, double k1, double b2, double k2)
+    (double, double) Point(double b1, double k1, double b2, double k2)
     {
 
-        double x = (b2 - b1) / (k1 - k2);
-        double y = k2 * x + b2;
-        return x;
+        var x = (b2 - b1) / (k1 - k2);
+        var y = k2 * x + b2;
+        return (x, y);
     }
-    double x = Math.Round(Point(b1, k1, b2, k2), 2);
-    Console.WriteLine($"({x} ; {Math.Round((k2 * x + b2), 2)})");
-}
+    var res = Point(b1, k1, b2, k2);
+    Console.WriteLine($"{res}");
+} */
 
