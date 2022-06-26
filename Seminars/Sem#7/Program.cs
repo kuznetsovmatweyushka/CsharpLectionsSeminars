@@ -102,11 +102,11 @@ void FillArray(int[,] array, int a, int b)
 }
 void SquareArray(int[,] array)
 {
-    for (int i = 0; i < array.GetLength(0); i++)
+    for (int i = 0; i < array.GetLength(0); i += 2)
     {
-        for (int j = 0; j < array.GetLength(1); j++)
+        for (int j = 0; j < array.GetLength(1); j += 2)
         {
-            if (i % 2 == 0 & j % 2 == 0) array[i, j] = array[i, j] * array[i, j];
+            array[i, j] = array[i, j] * array[i, j];
         }
     }
 }
@@ -115,13 +115,12 @@ Console.WriteLine("Ваш массив выглядит вот так: ");
 PrintArray(array);
 SquareArray(array);
 Console.WriteLine("Ваш массив выглядит теперь вот так: ");
-PrintArray(array);
-*/
+PrintArray(array); */
 
 /* Задача 51: Задайте двумерный массив. Найдите сумму
 элементов, находящихся на главной диагонали (с индексами
 (0,0); (1;1) и т.д. */
-/* Console.WriteLine("Введите количество столбцов: ");
+Console.WriteLine("Введите количество столбцов: ");
 int n = int.Parse(Console.ReadLine());
 Console.WriteLine("Введите количество строк: ");
 int m = int.Parse(Console.ReadLine());
@@ -154,12 +153,9 @@ void FillArray(int[,] array, int a, int b)
 int SummElements(int[,] array)
 {
     int count = 0;
-    for (int i = 0; i < array.GetLength(0); i++)
+    for (int i = 0; i < Math.Min(array.GetLength(0),array.GetLength(1)); i++)
     {
-        for (int j = 0; j < array.GetLength(1); j++)
-        {
-            if (i == j) count = count + array[i, j];
-        }
+        count += array[i, i];
     }
     return count;
 }
@@ -167,5 +163,5 @@ FillArray(array, a, b);
 Console.WriteLine("Ваш массив выглядит вот так: ");
 PrintArray(array);
 int summ = SummElements(array);
-System.Console.WriteLine($"Сумма элементов на главной диагонали равна: {summ} "); */
+System.Console.WriteLine($"Сумма элементов на главной диагонали равна: {summ} ");
 
