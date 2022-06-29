@@ -6,5 +6,6 @@ while(true)
         left: r.Next(Console.WindowWidth),
         top: r.Next(Console.WindowHeight));
     Console.Write(r.Next(10));
+    Console.ForegroundColor = ConsoleColor.DarkGreen;
     Thread.Sleep(1);    
 }
