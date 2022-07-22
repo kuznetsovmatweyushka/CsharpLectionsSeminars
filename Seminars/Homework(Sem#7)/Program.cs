@@ -79,15 +79,13 @@ int n1 = int.Parse(Console.ReadLine());
 void FindElement(int[,] array, int m1, int n1)
 {
     bool search = true;
-    for (int i = 0; i < array.GetLength(0); i++)
+
+    if (m1 >= array.GetLength(0) || n1 >= array.GetLength(1))
     {
-        for (int j = 0; j < array.GetLength(1); j++)
-        {
-            if (m1 >= array.GetLength(0) || n1 >= array.GetLength(1))
-                search = false;
-        }
+        search = false;
+        Console.WriteLine("Элемента не существует");
     }
-    if (search == true) Console.WriteLine($"Элемент существует и равен {array[m1, n1]}!");
+    else if (search == true) Console.WriteLine($"Элемент существует и равен {array[m1, n1]}!");
     else Console.WriteLine("Элемента не существует!");
 }
 FindElement(array, m1, n1); */

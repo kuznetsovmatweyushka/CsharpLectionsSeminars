@@ -83,7 +83,7 @@ for (int i = 0; i < info.Length; i++)
 числа в группе друг на друга не делятся)? Найдите M при заданном N и получите
 одно из разбиений на группы N ≤ 10²⁰. */
 
-Console.WriteLine("Введите число: ");
+/* Console.WriteLine("Введите число: ");
 int n = int.Parse(Console.ReadLine());
 
 int[] tempArray = CreateArray(n);
@@ -150,4 +150,15 @@ string PrintIntArray(int[] array)
     return result;
 }
 
-CreateRows(tempArray);
+CreateRows(tempArray); */ 
+
+/* // 5/6 + 7/8
+int a = 5;
+int b = 6;
+int c = 7;
+int d = 8;
+int f;
+int j;
+Console.WriteLine(f = (a * d) + (c * b));
+Console.WriteLine("--");
+Console.WriteLine(j = b * d); */
